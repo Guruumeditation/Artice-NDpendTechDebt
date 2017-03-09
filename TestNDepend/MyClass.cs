@@ -1,4 +1,6 @@
-﻿namespace TestNDepend
+﻿using System;
+
+namespace TestNDepend
 {
     public class MyClass
     {
@@ -25,5 +27,14 @@
         {
             MyProperty = !MyProperty;
         }
+
+        public async void FailGateAsync()
+        { }
+
+        public async void SuccessGateAsync(object sender, MyArgs args)
+        { }
     }
+
+    public class MyArgs : EventArgs
+    { }
 }

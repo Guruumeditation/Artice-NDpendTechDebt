@@ -52,5 +52,33 @@ namespace UnitTestProject1
 
             Assert.IsTrue(t.MyProperty);
         }
+
+        [TestMethod]
+        public void TestMethod6()
+        {
+            var t = new MyClass(true);
+
+            t.FailGateAsync();
+
+            Assert.IsTrue(t.MyProperty);
+        }
+
+        [TestMethod]
+        public void TestMethod7()
+        {
+            var t = new MyClass(true);
+
+            t.SuccessGateAsync(null, null);
+
+            Assert.IsTrue(t.MyProperty);
+        }
+
+        [TestMethod]
+        public void TestMethod9()
+        {
+            Program.Main(null);
+
+            Assert.IsTrue(true);
+        }
     }
 }
